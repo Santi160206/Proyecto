@@ -19,6 +19,7 @@ public class main{
                 System.out.println("Que desea observar \n1)Inventario ordenado alfabeticamente \n2)Listado de ventas");
                 op = sc1.nextInt();
                 if (op == 1) {
+                  lib.AbastecimientoLibros();
 
                 } else {
                     if (op == 2) {

@@ -4,6 +4,12 @@ public class main{
     public static void main(String[] args) {
         Scanner sc1 = new Scanner(System.in);
         Libreria lib= new Libreria();
+      
+      //Variables
+      String S="Si";
+      
+
+      do{
         
         System.out.println(" Bienvenido a la libreria libros y revistas ");
         System.out.println("seleccione: 1)Propietario  2)Usuario   3)Editorial");
@@ -58,14 +64,18 @@ public class main{
               System.out.println("1) si 2)No");
               lib.op= sc1.nextInt();
             if(lib.op==1){
-              
+              lib.AbastecimientoLibros();
+          
             }else{
               if(lib.op==2)
                 System.out.println("Muchas gracias,Hasta pronto");
                   System.exit(0);
             } 
           }
-          
+         System.out.println("Desea continuar?");
+          S=sc1.nextInt();
+        
+      }while(S.equals("Si"));
         }
     }
 

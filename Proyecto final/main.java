@@ -16,19 +16,15 @@ public class main{
             } while (Contraseña != 1234 && intentos <= 3);
             if (intentos <= 3) {
                 System.out.println("Bienvenido jefe");
-                System.out.println("Que desea observar \n1)Inventario ordenado alfabeticamente \n2)Depocitar más libros al Inventario   \n3)Listado de ventas");
+                System.out.println("Que desea observar \n1)Inventario ordenado alfabeticamente \n2)Listado de ventas");
                 op = sc1.nextInt();
                 if (op == 1) {
 
                 } else {
                     if (op == 2) {
 
-                    } else {
-                        if (op == 3) {
-
                         }
                     }
-                }
             } else {
                 System.out.println("El numero de intentos fue excedido");
                 System.exit(0);
@@ -51,6 +47,16 @@ public class main{
                     }
                 }
             }
+          
+        }else{
+          if (Id==3){
+            System.out.println("Bienvenido")
+              System.out.println("Desea ingresar Libros?")
+              
+
+            
+          }
+          
         }
     }
 

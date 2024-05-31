@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class main{
     public static void main(String[] args) {
         Scanner sc1 = new Scanner(System.in);
-      Libreria lib= new Libreria();
+        Libreria lib= new Libreria();
         
         System.out.println(" Bienvenido a la libreria libros y revistas ");
         System.out.println("seleccione: 1)Propietario  2)Usuario   3)Editorial");
@@ -41,10 +41,11 @@ public class main{
 
                 } else {
                     if (lib.op == 2) {
-                     
+                     System.out.println("El nombre del autor");
+                     lib.Busqueda=sc1.next();
 
                     } else if (lib.op == 3) {
-                         System.out.println("");
+                        
 
                         }
                     }

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Libreria {
-
+    int Contraseña, Id, op;
     static String[]libreria=new String[10];
     Scanner sc2=new Scanner(System.in);
 

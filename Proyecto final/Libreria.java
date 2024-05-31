@@ -24,7 +24,11 @@ public class Libreria {
 
     public void BusquedaLibrosLetra(){
         do {
-            
+             for(i=0;i<libreria.length;i++){
+                if(Busqueda.charAt(0)==libreria[i].charAt(0)){
+                    System.out.println(libreria[i]);
+               }
+            } 
         } while (op==2);
     }
 
@@ -33,11 +37,8 @@ public class Libreria {
             for(i=0;i<libreria.length;i++){
                 if(Busqueda==libreria[i]){
                     System.out.println(libreria[i]);
-                    
                 }
-
             }
-            
         } while (op==3);
     }
     

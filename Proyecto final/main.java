@@ -6,6 +6,7 @@ public class main{
         Libreria lib= new Libreria();
       
       //Variables
+      int i;
       String S="Si";
       
 
@@ -26,7 +27,9 @@ public class main{
                 System.out.println("Que desea observar \n1)Inventario ordenado alfabeticamente \n2)Listado de ventas");
                 lib.op = sc1.nextInt();
                 if (lib.op == 1) {
-                  lib.AbastecimientoLibros();
+                  for(i=0;i<lib.libreria.length;i++){
+                    System.out.println(lib.libreria[i]);
+                  }
 
                 } else {
                     if (lib.op == 2) {

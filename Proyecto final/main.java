@@ -52,9 +52,15 @@ public class main{
           if (Id==3){
             System.out.println("Bienvenido")
               System.out.println("Desea ingresar Libros?")
+              System.out.println("1) si 2)No")
+              op= sc1.nextint();
+            if(op==1){
               
-
-            
+            }else{
+              if(op==2)
+                System.out.println("Muchas gracias,Hasta pronto")
+                  System.exit(0);
+            } 
           }
           
         }

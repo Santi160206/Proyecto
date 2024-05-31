@@ -23,15 +23,15 @@ public class main{
 
                 } else {
                     if (op == 2) {
-
+                         //
                         }
                     }
             } else {
                 System.out.println("El numero de intentos fue excedido");
                 System.exit(0);
             }
-        } else {
-            if (Id == 2) {
+        } else if (Id == 2) {
+             
                 System.out.println("Bienvenido usuario");
                 System.out.println("como desea realizar su busqueda?");
                 System.out.println("1)Informacion Bibliografica respecto a un libro  2)Busqueda por autor   3)Busqueda por letra");
@@ -41,33 +41,30 @@ public class main{
                 } else {
                     if (op == 2) {
 
-                    } else {
-                        if (op == 3) {
+                    } else if (op == 3) {
+                         
 
                         }
                     }
-                }
-            }
+            
           
-        }else{
-          if (Id==3){
-            System.out.println("Bienvenido")
-              System.out.println("Desea ingresar Libros?")
-              System.out.println("1) si 2)No")
-              op= sc1.nextint();
+        }else if (Id==3){
+          
+            System.out.println("Bienvenido");
+              System.out.println("Desea ingresar Libros?");
+              System.out.println("1) si 2)No");
+              op= sc1.nextInt();
             if(op==1){
               
             }else{
               if(op==2)
-                System.out.println("Muchas gracias,Hasta pronto")
+                System.out.println("Muchas gracias,Hasta pronto");
                   System.exit(0);
             } 
           }
           
         }
     }
-
-}
 
     
 

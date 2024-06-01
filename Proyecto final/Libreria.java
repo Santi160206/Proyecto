@@ -43,14 +43,17 @@ public class Libreria {
      }
 }
     
-    public void VentaLibros(){
-        int []v=new int[5];
-        System.out.println("Cantidad de libros en el almacenamiento: "+lib.cantidad);
-        for(i=0;i<v.length;i++){
-            if(libreria[i]!="null"){
-                v[i]=1;
+  public void VentaLibros(){
+    int []v=new int[5];
+    System.out.println("Cantidad de libros en el almacenamiento: "+cantidad);
+    for(i=0;i<v.length;i++){
+        if(libreria[i]!="null"){
+            v[i]=1;
+        }else{
+            v[i]=0;
         }
     }
+}
     public void BibliografiaLibro(){}
 
         }

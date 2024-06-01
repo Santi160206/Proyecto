@@ -61,16 +61,13 @@ public class main{
                 lib.op = sc1.nextInt();
                 if (lib.op == 1) {
 
-                } else {
-                    if (lib.op == 2) {
-                     System.out.println("El nombre del autor");
-                     lib.Busqueda=sc1.next();
+                } else if (lib.op == 2)  {
+                  lib.BusquedaLibrosAutor();
 
                     } else if (lib.op == 3) {
-                        
-
-                        }
-                    }
+                      lib.BusquedaLibrosLetra();
+                         
+                          }
             
           
         }else if (lib.Id==3){

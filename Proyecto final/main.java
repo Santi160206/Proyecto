@@ -45,9 +45,8 @@ public class main{
                   }
 
                 } else if (lib.op == 2){
-                    
-                         //
-                        
+                    lib.VentaLibros();
+              
             } else {
                 System.out.println("El numero de intentos fue excedido");
                 System.exit(0);

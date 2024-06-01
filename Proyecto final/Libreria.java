@@ -3,14 +3,14 @@ import java.util.Scanner;
 public class Libreria {
 
     int i,j;
-    int Contraseña, Id, op;
+    int Contraseña, Id, op, cantidad=0;
     String Busqueda;
     
     static String[]libreria=new String[10];
     Scanner sc2=new Scanner(System.in);
 
     public void AbastecimientoLibros(){
-        int libros, cantidad=0;
+        int libros;
 
         System.out.println("Ingrese la cantidad de libros");
         libros=sc2.nextInt();

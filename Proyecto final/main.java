@@ -44,15 +44,15 @@ public class main{
             }
                   }
 
-                } else {
-                    if (lib.op == 2) {
+                } else if (lib.op == 2){
+                    
                          //
-                        }
+                        
                     }
             } else {
                 System.out.println("El numero de intentos fue excedido");
                 System.exit(0);
-            }
+          
         } else if (lib.Id == 2) {
              
                 System.out.println("Bienvenido usuario");

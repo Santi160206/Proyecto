@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Libreria {
 
-    int i;
+    int i,j;
     int Contraseña, Id, op;
     String Busqueda;
     

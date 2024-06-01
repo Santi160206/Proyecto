@@ -48,10 +48,10 @@ public class main{
                     
                          //
                         
-                    }
             } else {
                 System.out.println("El numero de intentos fue excedido");
                 System.exit(0);
+            }
           
         } else if (lib.Id == 2) {
              

@@ -22,27 +22,27 @@ public class Libreria {
        }
     }
 
-    public void BusquedaLibrosLetra(){
-        do {
-             for(i=0;i<libreria.length;i++){
-                if(Busqueda.charAt(0)==libreria[i].charAt(0)){
-                    System.out.println(libreria[i]);
-               }
-            } 
-        } while (op==2);
-    }
+   public void BusquedaLibrosAutor(){
+        System.out.println("El Nombre del autor");
+           Busqueda=sc2.next();
 
-    public void BusquedaLibrosNombre(){
-        do {
             for(i=0;i<libreria.length;i++){
                 if(Busqueda==libreria[i]){
-                    System.out.println(libreria[i]);
-                }
+                System.out.println(libreria[i]);
+        }
+      }    
+}
+
+    public void BusquedaLibrosLetra(){
+        System.out.println("Ingrese Nombre del libro");
+            letra=sc2.next().charAt(0);
+            for(i=0;i<libreria.length;i++){
+                if(Busqueda.charAt(0)==libreria[i].charAt(0)){
+                System.out.println(libreria[i]);
             }
-        } while (op==3);
-    }
+     }
+}
     
-    public void LibrosAgotados(){}
     public void VentaLibros(){}
     public void BibliografiaLibro(){}
 

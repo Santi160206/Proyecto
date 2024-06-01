@@ -5,6 +5,7 @@ public class Libreria {
     int i,j;
     int Contraseña, Id, op, cantidad=0;
     String Busqueda;
+    char letra;
     
     static String[]libreria=new String[10];
     Scanner sc2=new Scanner(System.in);

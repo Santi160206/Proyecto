@@ -6,7 +6,7 @@ public class main{
         Libreria lib= new Libreria();
       
       //Variables
-      int i;
+      int i,j;
       String S="Si";
       
 
@@ -27,8 +27,21 @@ public class main{
                 System.out.println("Que desea observar \n1)Inventario ordenado alfabeticamente \n2)Listado de ventas");
                 lib.op = sc1.nextInt();
                 if (lib.op == 1) {
+                   String aux;
+        
                   for(i=0;i<lib.libreria.length;i++){
-                    System.out.println(lib.libreria[i]);
+                    for(j=i+1;j<lib.libreria.length;j++){
+                        if(lib.libreria[i].compareTo(lib.libreria[j])>0){
+                            aux=lib.libreria[i];
+                            lib.libreria[i]=lib.libreria[j];
+                            lib.libreria[j]=aux;
+      
+                        }
+                    }
+                }
+                for(i=0;i<lib.libreria.length;i++){
+                System.out.println(lib.libreria[i]);
+            }
                   }
 
                 } else {

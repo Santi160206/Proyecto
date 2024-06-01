@@ -86,9 +86,9 @@ public class main{
             } 
           }
          System.out.println("Desea continuar?");
-          S=sc1.nextInt();
+          S=sc1.next().toUpperCase();
         
-      }while(S.equals("Si"));
+      }while(S.equals("SI"));
         }
     }
 

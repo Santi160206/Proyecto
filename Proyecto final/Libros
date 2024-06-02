@@ -1,4 +1,5 @@
 import java.util.Scanner;
+public class LIbros {
 Scanner sc2= new Scanner(System.in);
    Inventario inv= new Inventario();
    String PNombre;

@@ -17,10 +17,75 @@ public class Libreria {
     Scanner sc2=new Scanner(System.in);
 
   public void ventaLibros(){
-    
+    String Respuc= "s";
+    int PCantic;
+    while("s".equals(Respuc)){
+        System.out.println("Ingrese el titulo del libro");
+        PTitulo= sc2.nextLine();
+        System.out.println("Ingrese el nombre del autor");
+        PNombre=sc2.next();
+        System.out.println("Ingrese el apellido del autor");
+        PApellido=sc2.next();
+        System.out.println("Ingrese la cantidad de libros que desea comprar");
+        PCantic=sc2.nextInt();
+        int SWT=0, SWN=0, SWA=0;
+        for (int i = 0; i < 100; i++) {
+            if (inv.Autor[i].equals(PNombre)) {
+                SWN=0;
+                if (inv.Apellido[i].equals(PApellido)) {
+                    SWA=0;
+                    if (libreria[i].equals(PTitulo)) {
+                        SWT=0;
+                        if (inv.Ejemplares[i]>=PCantic) {
+                            inv.Ejemplares[i]-=PCantic;
+                            if (inv.Ejemplares[i]==0) {
+                                inv.Estado[i]=0;
+                                System.out.println("Compra exitosa");
+                                break;
+                                }
+                           }else{
+                                System.out.println("Solo contamos con "+ inv.Ejemplares[i]+"Uniadades para la venta");
+                                System.out.println("Desea comprarlas?(S/N)");
+                                String Resp= sc2.next();
+                                if ("S".equals(Resp)) {
+                                    inv.Ejemplares[i]=0;
+                                    inv.Estado[i]=0;
+                                    }
+                                }
+                        }else{
+                            SWT=1;
+                            }
+                    }else{
+                        SWA=1;
+                        }
+               }else{ 
+                    SWN=1;
+                    }
+           }  
+        if (SWT==1||SWA==1||SWN==1){
+            System.out.println("No se encuentra el libro deseado");
+            }
+        System.out.println("Desea comprar otro libro?(S/N)");
+        Respuc=sc2.next();
+       }
 }
 
     public void ordenAlfabeticamente(){
+        String aux;
+        
+                  for(i=0;i<libreria.length;i++){
+                    for(j=i+1;j<libreria.length;j++){
+                        if(libreria[i].compareTo(libreria[j])>0){
+                            aux=libreria[i];
+                            libreria[i]=libreria[j];
+                            libreria[j]=aux;
+      
+                        }
+                    }
+                }
+                for(i=0;i<libreria.length;i++){
+                System.out.println(libreria[i]);
+    }
 }
 
 

@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class ProyectoLibreria {
     public static void main(String[] args) {
         int Contraseña,op;
-        Libros lib = new Libros();
+        Libreria lib= new Libreria();
         Scanner sc1 = new Scanner(System.in);
         System.out.println(" Bienvenido a la libreria libros y revistas ");
         System.out.println("Bienvenido jefe");

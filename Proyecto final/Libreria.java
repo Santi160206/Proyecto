@@ -5,11 +5,6 @@ public class Libreria {
     Inventario inv= new Inventario();
 
     int i,j,PPrecio, cont,PUnidInv;
-    int Contraseña, Id, op, cantidad=0;
-    String Busqueda;
-    char letra;
-
-    //Variables sebas
     String PNombre,PApellido,PTitulo,PISBN,PEditorial,PFechaCo;
  
     
@@ -17,9 +12,9 @@ public class Libreria {
     Scanner sc2=new Scanner(System.in);
 
   public void ventaLibros(){
-    String Respuc= "s";
+    String Respuc= "S";
     int PCantic;
-    while("s".equals(Respuc)){
+    while("S".equals(Respuc)){
         System.out.println("Ingrese el titulo del libro");
         PTitulo= sc2.nextLine();
         System.out.println("Ingrese el nombre del autor");
@@ -66,7 +61,7 @@ public class Libreria {
             System.out.println("No se encuentra el libro deseado");
             }
         System.out.println("Desea comprar otro libro?(S/N)");
-        Respuc=sc2.next();
+        Respuc=sc2.next().toUpperCase();
        }
 }
 

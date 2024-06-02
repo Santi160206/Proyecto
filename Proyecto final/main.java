@@ -6,6 +6,9 @@ public class main {
         int Contraseña,op;
         Libreria lib= new Libreria();
         Scanner sc1 = new Scanner(System.in);
+        String x="SI";
+
+        do {
         System.out.println(" Bienvenido a la libreria libros y revistas ");
         System.out.println("Bienvenido jefe");
         int intentos = 0;
@@ -34,5 +37,8 @@ public class main {
                    System.out.println("El numero de intentos fue excedido");
                    System.exit(0);
             }
+             System.out.println("Desea continuar?");
+            x=sc1.next().toUpperCase();
+        }while (x.equals("SI"));
         }
     }

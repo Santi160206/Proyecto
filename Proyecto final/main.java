@@ -14,3 +14,25 @@ public class ProyectoLibreria {
                 Contraseña = sc1.nextInt();
                 intentos++;
             } while (Contraseña != 1234 && intentos <= 3);
+        if (intentos <= 3) {
+                System.out.println("Que desea observar \n1)Inventario ordenado alfabeticamente  \n2)Listado de ventas \n3)vender un libro");
+                op = sc1.nextInt();
+                if (op==1) {
+                    
+                    lib.validacionVectorLLeno();
+                    
+                }else{
+                    if (op==2) {
+                        
+                    }else{
+                        if (op==3) {
+                            lib.venderLibros();
+                        }
+                    }
+                }
+                 } else {
+                   System.out.println("El numero de intentos fue excedido");
+                   System.exit(0);
+            }
+        }
+    }

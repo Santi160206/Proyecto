@@ -2,11 +2,15 @@ import static java.lang.System.exit;
 import java.util.Scanner;
 
 public class main {
+    
     public static void main(String[] args) {
         int Contraseña,op;
+        
         Libreria lib= new Libreria();
         Scanner sc1 = new Scanner(System.in);
         String x="SI";
+
+        lib.llenarEspacios();
 
         do {
         System.out.println(" Bienvenido a la libreria libros y revistas ");

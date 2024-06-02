@@ -1,4 +1,4 @@
-mport static java.lang.System.exit;
+import static java.lang.System.exit;
 import java.util.Scanner;
 
 public class main {
@@ -29,7 +29,7 @@ public class main {
                         
                     }else{
                         if (op==3) {
-                            lib.venderLibros();
+                            lib.ventaLibros();
                         }
                     }
                 }

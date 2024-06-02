@@ -21,12 +21,10 @@ public class main {
                 System.out.println("Que desea observar \n1)Inventario ordenado alfabeticamente  \n2)Listado de ventas \n3)vender un libro");
                 op = sc1.nextInt();
                 if (op==1) {
-                    
-                    lib.validacionVectorLLeno();
-                    
+                    lib.ordenAlfabeticamente();
                 }else{
                     if (op==2) {
-                        
+                        lib.validacionVectorLLeno();
                     }else{
                         if (op==3) {
                             lib.ventaLibros();

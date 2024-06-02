@@ -1,7 +1,7 @@
 mport static java.lang.System.exit;
 import java.util.Scanner;
 
-public class ProyectoLibreria {
+public class main {
     public static void main(String[] args) {
         int Contraseña,op;
         Libreria lib= new Libreria();

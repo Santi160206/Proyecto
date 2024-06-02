@@ -8,7 +8,7 @@ public class Libreria {
     String PNombre,PApellido,PTitulo,PISBN,PEditorial,PFechaCo;
  
     
-    static String[]libreria=new String[100];
+    static String[]libreria=new String[10];
     Scanner sc2=new Scanner(System.in);
 
   public void ventaLibros(){
@@ -16,7 +16,7 @@ public class Libreria {
     int PCantic;
     while("S".equals(Respuc)){
         System.out.println("Ingrese el titulo del libro");
-        PTitulo= sc2.nextLine();
+        PTitulo= sc2.next();
         System.out.println("Ingrese el nombre del autor");
         PNombre=sc2.next();
         System.out.println("Ingrese el apellido del autor");
@@ -87,6 +87,7 @@ public class Libreria {
 
     public void validacionVectorLLeno(){
         int pos=0;
+        int libs;
        for (int i = 0; i < 100; i++) {
            if ("".equals(inv.Autor[i])) {
                pos=i;
@@ -97,8 +98,15 @@ public class Libreria {
            cont=pos;
            String Respu="s";
         while("s".equals(Respu)){
+
+            System.out.println("Cuantos libros desea ingresar?");
+            libs=sc2.nextInt();
+
+            for(i=0;i<libs;i++){
+                System.out.println();
+
              System.out.println("Digite el Titulo del libro");
-             PTitulo= sc2.nextLine();
+             libreria[i]= sc2.nextLine();
              System.out.println("Digite el Nombre del autor");
              PNombre= sc2.next();
              System.out.println("Digite el Apellido del autor");
@@ -116,7 +124,8 @@ public class Libreria {
              int mes= sc2.nextInt();
              System.out.println("Ingrese el año");
              int año=sc2.nextInt();
-             if(año>=1800 && año<=2024){
+                
+             /*if(año>=1800 && año<=2024){
                  if (mes>=1 && mes<=12) {
                         if (mes==2) {
                          if (dia>0 && dia>=1 && dia<=28) {
@@ -169,11 +178,20 @@ public class Libreria {
              inv.Precio[lugar]=PPrecio;
              inv.Estado[lugar]=1;
              cont+=1;
-             }
+             }*/
+            }
              System.out.println("Desea ingresar otro libro?(S/N)");
-             Respu = sc2.next();
+             Respu = sc2.next().toUpperCase();
          }
-     
-    
 }
+    
+public void llenarEspacios(){
+    for(i=0; i<libreria.length;i++){
+        libreria[i]="Z/A";
+    }
+}
+
+public void bibliografiaLibro(){}
+public void listadoLibros(){}
+public void librosVendidos(){}
         }

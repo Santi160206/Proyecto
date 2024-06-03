@@ -1,1 +1,14 @@
+package proyecto;
 
+public class Inventario {
+    String []Autor= new String[100];
+    String []Titulo=new String[100];
+    String []ISBN=new String[100];
+    String []Apellido=new String[100];
+    float []Precio=new float[100];
+    int []Ejemplares=new int[100];
+    int []Estado=new int[100];
+    String []FechaCopyright=new String[100];
+    int [] Librosvendidos= new int[100];
+    String []Editorial= new String[100];
+}

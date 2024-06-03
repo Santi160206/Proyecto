@@ -206,3 +206,106 @@ int pos=0;
     }
     return null;
 }
+
+    public String buscarporAutor(){
+    System.out.println("Hola");
+    String Resp = "S";         
+    while ("S".equals(Resp)) {
+        sc2.nextLine(); // Consumir el salto de línea pendiente
+        System.out.println("Ingrese el nombre del autor");
+        PNombre = sc2.nextLine(); // Leer una línea completa
+        System.out.println("Ingrese el apellido del autor");
+        PApellido = sc2.nextLine(); // Leer una línea completa
+        int SWI = 0;
+        for (int i = 0; i < 100; i++) {
+            if (!"".equals(inv.Autor[i]) && !"".equals(inv.Apellido[i])) {
+                if (inv.Autor[i] != null && inv.Apellido[i] != null) {
+    if (inv.Autor[i].trim().equalsIgnoreCase(PNombre.trim()) && 
+        inv.Apellido[i].trim().equalsIgnoreCase(PApellido.trim())) {
+        System.out.println("Los libros de este autor son: ");
+                    System.out.println(inv.Titulo[i]);
+                    SWI = 1;
+                }
+            }
+        }
+        if (SWI == 0) {
+            System.out.println("No contamos con libros de este autor");
+        }
+    }
+        System.out.println("Desea hacer otra búsqueda por autor?(S/N)");
+        Resp = sc2.next();
+}
+        return Resp;
+    }
+    public String listaDeVentas(){
+      System.out.println("Los libros son:");
+    for (int i = 0; i < 100; i++) {
+        if (inv.Titulo[i] != null && !"".equals(inv.Titulo[i])) {
+            System.out.println(inv.Titulo[i]);
+            System.out.println("numero de copias vendidas"+ inv.Librosvendidos[i]);
+        } else {
+            break;
+        }
+    }
+    return null;
+    }
+    public void ordenarPorTitulo(){
+      String auxt,auxna,auxap,auxfc,auxis,auxedi;
+      int auxej,auxven,auxest;
+      float auxpre;
+    for (int i = 0; i < 100; i++) {
+        for (int j = 0; j < 100 - 1 - i; j++) {
+            // Verificar si los elementos no son null antes de comparar
+            if (inv.Titulo[j] != null && inv.Titulo[j+1] != null && inv.Titulo[j].compareTo(inv.Titulo[j+1]) > 0) {
+                auxt = inv.Titulo[j];
+                inv.Titulo[j] = inv.Titulo[j+1];
+                inv.Titulo[j+1] = auxt;
+                auxna = inv.Autor[j];
+                inv.Autor[j] = inv.Autor[j+1];
+                inv.Autor[j+1] = auxna;
+                auxap = inv.Apellido[j];
+                inv.Apellido[j] = inv.Apellido[j+1];
+                inv.Apellido[j+1] = auxap;
+                auxis = inv.ISBN[j];
+                inv.ISBN[j] = inv.ISBN[j+1];
+                inv.ISBN[j+1] = auxis;
+                auxfc = inv.FechaCopyright[j];
+                inv.FechaCopyright[j] = inv.FechaCopyright[j+1];
+                inv.FechaCopyright[j+1] = auxfc;
+                auxej= inv.Ejemplares[j];
+                inv.Ejemplares[j] = inv.Ejemplares[j+1];
+                inv.Ejemplares[j+1] = auxej;
+                auxedi = inv.Editorial[j];
+                inv.Editorial[j] = inv.Editorial[j+1];
+                inv.Editorial[j+1] = auxedi;
+                auxpre =inv.Precio[j];
+                inv.Precio[j] = inv.Precio[j+1];
+                inv.Precio[j+1] = auxpre;
+                auxest = inv.Estado[j];
+                inv.Estado[j] = inv.Estado[j+1];
+                inv.Estado[j+1] = auxest;
+                auxven = inv.Librosvendidos[j];
+                inv.Librosvendidos[j] = inv.Librosvendidos[j+1];
+                inv.Librosvendidos[j+1] = auxest;
+            }
+        }  
+    }
+    System.out.println("Estos son los libros en su orden alfabético:");
+    for (int i = 0; i < 100; i++) {
+        if (inv.Titulo[i] != null && !"".equals(inv.Titulo[i])) {
+            System.out.println(inv.Titulo[i]);
+            System.out.println(inv.Autor[i]);
+            System.out.println(inv.Apellido[i]);
+            System.out.println(inv.ISBN[i]);
+            System.out.println(inv.Editorial[i]);
+            System.out.println(inv.FechaCopyright[i]);
+            System.out.println(inv.Precio[i]);
+            System.out.println(inv.Ejemplares[i]);
+            System.out.println(inv.Estado[i]);
+            System.out.println(inv.Librosvendidos[i]);
+        } else {
+            break;
+        }
+    }
+}
+}
